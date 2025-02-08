@@ -32,7 +32,8 @@ Food исчезает и генерируется (position) случайно н
 информации. После этого рассчитывается средняя насыщенность каждой Animal (satiation_avg) за весь её
 возраст (generation_age).
 2) Создается генетический алгоритм обучения GeneticFlexAlgorithm.
-3) Animal переводится в вид удобный для алгоритма обучения AnimalIndividual через (from_animal).
+3) Animal переводится в вид удобный для алгоритма обучения AnimalIndividual через (from_animal). Он
+реализует трейт ga::Individual и ga::IndividualFlex, который отвечает за ГА обучения.
 4) У алгоритма GeneticFlexAlgorithm вызывается само обучение (evolve), которое отдает новую популяцию
 птичек в виде Vec<AnimalIndividual> и статистику по предыдущему поколению птичек Statistics.
 5) Птички в World замещаются на новых, если они были (changed) путем преобразования AnimalIndividual в
